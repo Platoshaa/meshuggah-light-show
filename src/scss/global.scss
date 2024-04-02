@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:0.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.5em 0.625em 0.75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+:root {
+	font-size: 15px;
+}
+
+@font-face {
+    font-family: "Meshugah";
+    font-display: swap;
+    src: url("../fonts/abaddoncyr.woff") format("woff"), url("../fonts/abaddoncyr.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  $mesh:Meshugah;
+$bleed:#a30000;
+$second: #b88322;
+button{
+  background-color: $bleed;
+  border:none;
+  padding: .3em;
+}
+html { 
+  height:100%;
+}
+body { 
+height:100%;
+}
+
+body {
+	margin: 0;
+
+
+	font-family: Meshugah;
+	font-weight: 500;
+	color: #fff;
+	
+}
+
+h1,h2,h3,h4,h5{
+  font-family: $mesh !important;
+  font-size: inherit;
+  color: $second;
+  padding: 0;
+  margin: 0;
+  margin-bottom: .5em ;
+
+}
+body::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: $bleed;
+outline: 1px solid $bleed;
+}
+main {
+	display: flex;
+  width: 100%;
+	flex-direction: column;
+
+}
+
+.title-section{
+  color: #a30000;
+}
+
+footer{
+  z-index: 1;
+position: relative;
+}
+section{
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+z-index: 1;
+position: relative;
+margin-bottom: 2em;
+a{
+  filter: invert(.7) grayscale(.7);
+  color:$bleed;
+  background-color: transparent;
+}  
+
+}
+ul,li,ol{
+  list-style: none;
+  padding: 0;
+  margin:0
+}
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+ 
+  margin: 0;
+  &.active{
+      overflow-y: scroll;
+  }
+  background: #000;
+  font-size: 50px;
+ 
+@media (max-width:1300px){
+  font-size: 40px;
+
+}
+@media (max-width:768px){
+  font-size: 30px;
+
+}
+@media (max-width:600px){
+  font-size: 25px;
+
+}
+}
+
+
+.loader{
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  padding: 0 10%;
+  flex-direction: column
+  ;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -1000%;
+  background-color: #000;
+  &.active{
+left: 0;
+  }
+ 
+}.video-bg {
+
+   height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+video{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+}
+}
+.text{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1600px;
+// @media (max-width:768px){
+// margin-left: 0;
+// }
+}
+
